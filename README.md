@@ -4,6 +4,8 @@ DocuChat is a document-based chatbot that leverages advanced NLP models to provi
 
 ![Welcome Screen](01-DocuChat.png)
 ![Manage Projects & Data](02-ManageProjects.png)
+![Chat with your Documents](03-ChatInterface.png)
+
 ## Overview
 
 The project includes scripts and configurations to:
