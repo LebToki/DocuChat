@@ -13,28 +13,24 @@ The project includes scripts and configurations to:
 ## Directory Structure
 
 DocuChat/
-│
-├── backend/
-│   ├── app.py                 # Main Flask app for handling requests
-│   ├── download_models.py     # Script to download models
-│   ├── fine_tune_model.py     # Script to fine-tune the model
-│   ├── models/                # Directory to store models
-│   ├── project_embeddings/    # Directory to store project embeddings
-│   ├── static/
-│   │   └── uploads/           # Directory to store uploaded files
-│   └── templates/             # HTML templates
-│
-├── vendor/
-│   ├── bootstrap/             # Bootstrap CSS and JS
-│   ├── font-awesome/          # FontAwesome CSS and JS
-│   ├── jquery/                # jQuery library
-│
-└── public/
-├── css/
-│   └── styles.css         # Custom styles
-└── img/
-├── DocuChat-wide-Logo2.png # Logo
-└── types/             # File type icons
+**backend/**: Contains the backend code and scripts for the project.
+  - **app.py**: Main Flask app for handling requests.
+  - **download_models.py**: Script to download models.
+  - **fine_tune_model.py**: Script to fine-tune the model.
+  - **models/**: Directory to store models.
+  - **project_embeddings/**: Directory to store project embeddings.
+  - **static/uploads/**: Directory to store uploaded files.
+  - **templates/**: HTML templates.
+  
+- **vendor/**: Contains third-party libraries and frameworks.
+  - **bootstrap/**: Bootstrap CSS and JS.
+  - **font-awesome/**: FontAwesome CSS and JS.
+  - **jquery/**: jQuery library.
+  
+- **public/**: Contains public assets.
+  - **css/styles.css**: Custom styles.
+  - **img/DocuChat-wide-Logo2.png**: Logo.
+  - **img/types/**: File type icons.
 
 ## Installation
 
