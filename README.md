@@ -1,6 +1,6 @@
 # DocuChat Model Fine-Tuning
 
-This project provides tools to fine-tune a BERT-based multilingual model for text classification and document search tasks.
+DocuChat is a document-based chatbot that leverages advanced NLP models to provide intelligent responses based on the content of uploaded documents. This project consists of a PHP frontend and a Python backend.
 
 ## Overview
 
