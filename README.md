@@ -13,6 +13,7 @@ The project includes scripts and configurations to:
 ## Directory Structure
 
 DocuChat/
+
 **backend/**: Contains the backend code and scripts for the project.
   - **app.py**: Main Flask app for handling requests.
   - **download_models.py**: Script to download models.
