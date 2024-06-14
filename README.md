@@ -93,33 +93,13 @@ python app.py
 The api is now available at http://localhost:5000/
 
 
-Browse to your PHP Client installation
+## Browse to your PHP Client installation
+or if you are using a pretty url then use the local domain template and browse to the correct project domain using your browser.
 ```php
 https://localhost/DocuChat/frontend/
 ```
 
-## Requirements
-
-### Backend (Python)
-- Python 3.11
-- Flask
-- Flask-CORS
-- pdfminer.six
-- python-docx
-- openpyxl
-- python-pptx
-- transformers
-- faiss
-- langdetect
-- torch
-
-### Frontend (PHP)
-- PHP 7.4+
-- Bootstrap
-- FontAwesome
-- jQuery
-
-## Setup
+## Setup Simplified Steps
 
 ### Backend
 
