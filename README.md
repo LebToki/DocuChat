@@ -10,28 +10,60 @@ The project includes scripts and configurations to:
 - Generate embeddings using a BERT-based model
 - Fine-tune the model on specific tasks
 
-## Directory Structure
-
-DocuChat/
+## Project Structure
 
 **backend/**: Contains the backend code and scripts for the project.
-  - **app.py**: Main Flask app for handling requests.
-  - **download_models.py**: Script to download models.
-  - **fine_tune_model.py**: Script to fine-tune the model.
-  - **models/**: Directory to store models.
-  - **project_embeddings/**: Directory to store project embeddings.
-  - **static/uploads/**: Directory to store uploaded files.
-  - **templates/**: HTML templates.
-  
-- **vendor/**: Contains third-party libraries and frameworks.
-  - **bootstrap/**: Bootstrap CSS and JS.
-  - **font-awesome/**: FontAwesome CSS and JS.
-  - **jquery/**: jQuery library.
-  
-- **public/**: Contains public assets.
-  - **css/styles.css**: Custom styles.
-  - **img/DocuChat-wide-Logo2.png**: Logo.
-  - **img/types/**: File type icons.
+- **app.py**: Main Flask app for handling requests.
+- **download_models.py**: Script to download models.
+- **fine_tune_model.py**: Script to fine-tune the model.
+- **models/**: Directory to store models.
+  - **bert-base-multilingual-cased/**: Directory for the bert-base-multilingual-cased model.
+- **project_embeddings/**: Directory to store project embeddings.
+  - **YourProjectName/**: Your Own Projects Embeddings will be created here
+- **results/**: Directory to store fine-tuning results.
+- **static/**: Directory for static files.
+  - **embeddings/**: Directory to store generated embeddings.
+- **YourProjectName/**: Your Own Projects Embeddings will be created here
+  - **uploads/**: Directory to store uploaded files.
+  - **YourProjectName/**: Your Own Projects Embeddings will be created here
+
+- **templates/**: HTML templates.
+- **__pycache__/**: Python cache files.
+
+**frontend/**: Contains the frontend code and assets.
+- **public/**: Public assets for the frontend.
+  - **css/**: Custom styles.
+  - **img/**: Images for the frontend.
+    - **types/**: File type icons.
+  - **js/**: JavaScript files.
+  - **src/**: Source files for the frontend.
+    - **views/**: Views for the frontend.
+
+**vendor/**: Contains third-party libraries and frameworks.
+- **bootstrap/**: Bootstrap CSS and JS.
+- **font-awesome/**: FontAwesome CSS and JS.
+- **jquery/**: jQuery library.
+
+## Requirements
+
+### Backend (Python)
+- Python 3.11
+- Flask
+- Flask-CORS
+- pdfminer.six
+- python-docx
+- openpyxl
+- python-pptx
+- transformers
+- faiss
+- langdetect
+- torch
+
+### Frontend (PHP)
+- PHP 7.4+
+- Bootstrap
+- FontAwesome
+- jQuery
 
 ## Installation
 
@@ -66,43 +98,67 @@ Browse to your PHP Client installation
 https://localhost/DocuChat/frontend/
 ```
 
-### Usage
-- Upload Documents
+## Requirements
 
-- Navigate to upload.php to upload documents.
-- Supported formats: PDF, DOCX, XLSX, PPTX, PPT, TXT.
-- Manage Projects. Navigate to manage.php to create, delete, and manage projects.
-- Generate embeddings for documents in a project.
-- Ask Questions . Navigate to chat.php to interact with the documents.
+### Backend (Python)
+- Python 3.11
+- Flask
+- Flask-CORS
+- pdfminer.six
+- python-docx
+- openpyxl
+- python-pptx
+- transformers
+- faiss
+- langdetect
+- torch
 
-- Fine-Tuning
-The fine_tune_model.py script can be used to fine-tune the model on specific text data:
+### Frontend (PHP)
+- PHP 7.4+
+- Bootstrap
+- FontAwesome
+- jQuery
+
+## Setup
+
+### Backend
+
+1. Create a virtual environment and activate it:
+   ```sh
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
+   ```
+# Install the required Python packages:
+
+```sh
+pip install -r requirements.txt
 ```
-python fine_tune_model.py
+# Download the necessary models by running:
+
+```sh
+python backend/download_models.py
 ```
-Modify the texts and labels variables in fine_tune_model.py to include your data.
-or simply use the manage.php visual interface
+# Run the Flask app:
 
-# Scripts
+```sh
+python backend/app.py
+```
+# Frontend
+Ensure you have a local server setup (e.g., XAMPP, Laragon).
 
-## app.py
-Main Flask app for handling requests:
+Place the PHP files in the appropriate directory of your server.
+Open the project in your browser.
 
-- Upload documents
-- Generate embeddings
-- Ask questions
-- Manage projects
+# Usage
+- Upload documents through the frontend interface.
+- Ask questions related to the uploaded documents.
+- The backend will process the documents, generate embeddings, and provide relevant responses based on the content.
 
-## download_models.py
-Script to download and save models:
+# Fine-Tuning
+To fine-tune the model, run the following script:
+```
+python backend/fine_tune_model.py
 
-- Downloads model and tokenizer from the Hugging Face hub.
-- Saves them in the models directory.
-
-## fine_tune_model.py
-Script to fine-tune the model:
-
-- Fine-tunes on provided text data and labels.
-- Saves the fine-tuned model in the fine-tuned-model directory.
-
-# LICENSE
+```
+# Contributing
+Contributions are welcome! Please submit a pull request or open an issue for any improvements or bugs.
