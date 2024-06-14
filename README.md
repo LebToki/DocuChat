@@ -11,7 +11,7 @@ The project includes scripts and configurations to:
 - Fine-tune the model on specific tasks
 
 ## Directory Structure
-'''bash
+
 DocuChat/
 │
 ├── backend/
@@ -35,7 +35,6 @@ DocuChat/
 └── img/
 ├── DocuChat-wide-Logo2.png # Logo
 └── types/             # File type icons
-```
 
 ## Installation
 
