@@ -1,0 +1,54 @@
+.arabic {
+    direction: rtl;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.english {
+    direction: ltr;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, .55);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(1, 183, 198);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #ffffff;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+#chatbox {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+#chatbox #messages {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+}
+
+.input-group {
+    margin-top: 10px;
+}
