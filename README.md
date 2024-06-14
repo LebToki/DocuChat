@@ -2,6 +2,7 @@
 
 DocuChat is a document-based chatbot that leverages advanced NLP models to provide intelligent responses based on the content of uploaded documents. This project consists of a PHP frontend and a Python backend.
 
+![Welcome Screen](01-DocuChat.png)
 ## Overview
 
 The project includes scripts and configurations to:
