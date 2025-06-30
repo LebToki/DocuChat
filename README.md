@@ -113,34 +113,6 @@ python -m venv .venv
 source .venv/bin/activate # On Windows, use `.venv\\Scripts\\activate`
 pip install -r requirements.txt
 ```
-Download the model:
-```bash
-python download_models.py
-```
-
-Before running the backend you must provide a secret key for Flask sessions. Set
-the `SECRET_KEY` environment variable and optionally `ALLOWED_ORIGINS` to limit
-CORS access.
-
-```bash
-export SECRET_KEY=your_secret_key
-# Optional: allow only specific origins
-export ALLOWED_ORIGINS="http://localhost:8080"
-```
-
-Run the Flask app:
-
-```bash
-python app.py
-```
-The api is now available at http://localhost:5000/
-
-
-## Browse to your PHP Client installation
-or if you are using a pretty url then use the local domain template and browse to the correct project domain using your browser.
-```php
-https://localhost/DocuChat/
-```
 
 ## Setup Simplified Steps
 
