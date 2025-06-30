@@ -1,3 +1,4 @@
+<?php require_once "../../../config.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +72,7 @@
         <script>
             document.getElementById('fine-tune-button').addEventListener('click', function() {
                 const projectName = document.getElementById('generate-embeddings-projects').value;
-                fetch('http://localhost:8080/fine_tune', {
+                fetch('<?php echo BACKEND_URL; ?>/fine_tune', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -102,7 +103,7 @@
     <script>
         function createProject() {
             var projectName = document.getElementById("new-project").value;
-            fetch('http://localhost:8080/projects', {
+            fetch('<?php echo BACKEND_URL; ?>/projects', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -122,7 +123,7 @@
 
         function deleteProject() {
             var projectName = document.getElementById("existing-projects").value;
-            fetch('http://localhost:8080/projects', {
+            fetch('<?php echo BACKEND_URL; ?>/projects', {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -142,7 +143,7 @@
 
         function generateEmbeddings() {
             var projectName = document.getElementById("generate-embeddings-projects").value;
-            fetch(`http://localhost:8080/projects/${projectName}/generate_embeddings`, {
+            fetch(`<?php echo BACKEND_URL; ?>/projects/${projectName}/generate_embeddings`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -159,7 +160,7 @@
         }
 
         function deleteFile(projectName, fileName) {
-            fetch(`http://localhost:8080/projects/${projectName}/files`, {
+            fetch(`<?php echo BACKEND_URL; ?>/projects/${projectName}/files`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -178,7 +179,7 @@
         }
 
         function loadProjects() {
-            fetch('http://localhost:8080/projects')
+            fetch('<?php echo BACKEND_URL; ?>/projects')
             .then(response => response.json())
             .then(data => {
                 const projectSelect = document.getElementById('existing-projects');
