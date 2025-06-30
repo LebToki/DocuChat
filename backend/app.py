@@ -16,9 +16,18 @@ from langdetect import detect
 # Set environment variable to handle OpenMP error
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
+# Fetch the secret key from the environment and fail fast if it's missing
+SECRET_KEY = os.environ.get("SECRET_KEY")
+if not SECRET_KEY:
+    raise RuntimeError("SECRET_KEY environment variable not set")
+
 app = Flask(__name__)
-app.secret_key = os.environ.get('SECRET_KEY', 'default_secret_key')
-CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
+app.secret_key = SECRET_KEY
+
+# Allow restricting CORS origins via the ALLOWED_ORIGINS environment variable
+_origins = os.environ.get("ALLOWED_ORIGINS", "*")
+origins = [o.strip() for o in _origins.split(",")] if _origins != "*" else "*"
+CORS(app, resources={r"/*": {"origins": origins}}, supports_credentials=True)
 
 UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER

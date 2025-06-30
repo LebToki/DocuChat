@@ -118,6 +118,16 @@ Download the model:
 python download_models.py
 ```
 
+Before running the backend you must provide a secret key for Flask sessions. Set
+the `SECRET_KEY` environment variable and optionally `ALLOWED_ORIGINS` to limit
+CORS access.
+
+```bash
+export SECRET_KEY=your_secret_key
+# Optional: allow only specific origins
+export ALLOWED_ORIGINS="http://localhost:8080"
+```
+
 Run the Flask app:
 
 ```bash
