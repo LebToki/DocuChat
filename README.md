@@ -113,34 +113,6 @@ python -m venv .venv
 source .venv/bin/activate # On Windows, use `.venv\\Scripts\\activate`
 pip install -r requirements.txt
 ```
-Download the model:
-```bash
-python download_models.py
-```
-
-Run the Flask app:
-
-```bash
-python app.py
-```
-The api is now available at http://localhost:8080/
-
-## Docker Setup
-
-1. Ensure Docker and Docker Compose are installed.
-2. Build and start both services:
-   ```bash
-   docker compose up --build
-   ```
-3. The backend API will be available at [http://localhost:8080](http://localhost:8080)
-   and the PHP frontend at [http://localhost:8081](http://localhost:8081).
-
-
-## Browse to your PHP Client installation
-or if you are using a pretty url then use the local domain template and browse to the correct project domain using your browser.
-```sh
-http://localhost:8081/
-```
 
 ## Setup Simplified Steps
 
