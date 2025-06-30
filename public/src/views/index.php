@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DocuChat</title>
-    <link rel="stylesheet" href="../../../../vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../../vendor/font-awesome/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../public/css/styles.css">
 </head>
 
@@ -41,7 +41,7 @@
         <h1>Welcome to DocuChat</h1>
         <p>Select an option from the navigation menu to get started.</p>
     </div>
-    <script src="../../../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

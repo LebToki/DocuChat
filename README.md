@@ -64,8 +64,7 @@ The project includes scripts and configurations to:
 - **templates/**: HTML templates.
 - **__pycache__/**: Python cache files.
 
-**frontend/**: Contains the frontend code and assets.
-- **public/**: Public assets for the frontend.
+- **public/**: Frontend code and assets.
   - **css/**: Custom styles.
   - **img/**: Images for the frontend.
     - **types/**: File type icons.
@@ -130,7 +129,7 @@ The api is now available at http://localhost:5000/
 ## Browse to your PHP Client installation
 or if you are using a pretty url then use the local domain template and browse to the correct project domain using your browser.
 ```php
-https://localhost/DocuChat/frontend/
+https://localhost/DocuChat/
 ```
 
 ## Setup Simplified Steps
