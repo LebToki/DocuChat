@@ -1,3 +1,4 @@
+<?php require_once "auth.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +53,7 @@
 				<li class="nav-item">
 					<a class="nav-link" href="manage.php">Manage Projects</a>
 				</li>
+                                <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
 			
 			</ul>
 		</div>

@@ -20,6 +20,10 @@ app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY', 'default_secret_key')
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
+# Simple credentials for optional API login
+USERNAME = os.environ.get('DOCUCHAT_USER', 'admin')
+PASSWORD = os.environ.get('DOCUCHAT_PASS', 'password')
+
 UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -203,6 +207,18 @@ def generate_embeddings_for_text(text):
         text_chunks.append(chunk_text)
 
     return chunk_embeddings, text_chunks
+
+# Optional API login endpoint
+@app.route('/login', methods=['POST'])
+def api_login():
+    data = request.json
+    if not data:
+        return jsonify({'status': 'failure'}), 400
+    username = data.get('username')
+    password = data.get('password')
+    if username == USERNAME and password == PASSWORD:
+        return jsonify({'status': 'success'})
+    return jsonify({'status': 'failure'}), 401
 
 @app.route('/projects/<project_name>/files', methods=['DELETE'])
 def delete_file_from_project(project_name):
