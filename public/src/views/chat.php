@@ -1,4 +1,6 @@
+
 <?php require_once "auth.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -103,7 +105,7 @@
     }
 
     function loadProjects() {
-        fetch('http://localhost:8080/projects')
+        fetch('<?php echo BACKEND_URL; ?>/projects')
             .then(response => response.json())
             .then(data => {
                 const projectSelect = document.getElementById('project');
@@ -129,7 +131,7 @@
             appendMessage(userMessage, 'user-message');
             document.getElementById('user-input').value = '';
 
-            fetch('http://localhost:8080/ask', {
+            fetch('<?php echo BACKEND_URL; ?>/ask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
