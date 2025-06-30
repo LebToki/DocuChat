@@ -1,3 +1,4 @@
+<?php require_once "../../../config.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,7 +85,7 @@
 <script>
     $(document).ready(function() {
         // Fetch and populate projects
-        $.get('http://localhost:8080/projects', function(data) {
+        $.get('<?php echo BACKEND_URL; ?>/projects', function(data) {
             var projectSelect = $('#project');
             projectSelect.empty();
             data.projects.forEach(function(project) {
@@ -110,7 +111,7 @@
             event.preventDefault();
             var formData = new FormData(this);
             $.ajax({
-                url: 'http://localhost:8080/upload',
+                url: '<?php echo BACKEND_URL; ?>/upload',
                 type: 'POST',
                 data: formData,
                 processData: false,
