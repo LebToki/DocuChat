@@ -1,159 +1,337 @@
-# DocuChat Model Fine-Tuning
+# 🚀 DocuChat - AI-Powered Document Chat System
 
-## Introducing DocuChat
+<div align="center">
 
-In today's fast-paced world, managing and interacting with various documents can be a daunting task. Imagine having a tool that not only simplifies this process but also enhances it using the power of Artificial Intelligence. Enter DocuChat, an innovative solution designed to revolutionize the way we handle documents.
-DocuChat is a document-based chatbot that leverages advanced NLP models to provide intelligent responses based on the content of uploaded documents. This project consists of a PHP frontend and a Python backend.
+![DocuChat](https://img.shields.io/badge/DocuChat-AI%20Powered-blue?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.11+-green?style=for-the-badge&logo=python)
+![PHP](https://img.shields.io/badge/PHP-7.4+-purple?style=for-the-badge&logo=php)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-## What is DocuChat?
-DocuChat is a groundbreaking project that leverages the capabilities of Generative AI to analyze, interact with, and retrieve information from various types of documents, including PDFs, DOCX, PPT, and more. Whether you're a hobbyist, a beginner, or a professional, DocuChat offers a seamless and efficient way to manage your document needs.
+**Transform your documents into an intelligent conversation partner**
 
-# For Hobbyists and Beginners
-Are you new to the world of Natural Language Processing (NLP) and AI? 
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Contributing](#-contributing)
 
-DocuChat is the perfect starting point for you. With a user-friendly interface and straightforward setup, you can quickly dive into the exciting world of AI and document management. Here's what you can expect:
+</div>
 
-- Easy Setup: 
-Follow our simple installation guide to get started.
+---
 
-- Interactive Learning: 
-Experiment with different document types and see how AI analyzes and retrieves information.
+## ✨ Overview
 
-- Community Support: 
-Join our growing community of hobbyists and beginners to share experiences, ask questions, and learn together.
+DocuChat is a cutting-edge **Retrieval-Augmented Generation (RAG)** system that transforms static documents into interactive, AI-powered knowledge bases. Upload your documents, ask questions, and get intelligent answers powered by advanced NLP models.
 
-# For Professionals
-If you're a professional looking for a robust and reliable document management solution, DocuChat has got you covered. With advanced features and customizable options, you can tailor the tool to meet your specific needs. Here’s how DocuChat can benefit you:
+Whether you're a researcher analyzing papers, a student studying materials, or a professional managing documentation, DocuChat makes document interaction seamless and intelligent.
 
-- Efficiency: 
-Save time by letting AI handle the heavy lifting of document analysis and information retrieval.
+---
 
-- Accuracy: 
-Ensure precise and relevant information extraction with our fine-tuned models.
+## 🌟 Features
 
-- Scalability: 
-Easily integrate DocuChat into your existing workflows and scale it as your document management needs grow.
+### 🎨 Modern UI/UX
+- **Beautiful Dark Theme** - Eye-friendly dark mode with modern gradients
+- **Responsive Design** - Works perfectly on desktop, tablet, and mobile
+- **Smooth Animations** - Polished transitions and micro-interactions
+- **Intuitive Navigation** - Clean, user-friendly interface
 
-## Get Involved
-We invite contributors and sponsors to join us in enhancing DocuChat. Your support and contributions can help us bring even more exciting features and improvements to the project. Whether you're a developer, a researcher, or a sponsor, there's a place for you in the DocuChat community.
+### 💬 Enhanced Chat Interface
+- **Real-time Chat** - Interactive conversation with your documents
+- **Typing Indicators** - Visual feedback while AI processes your query
+- **Message History** - View and manage your conversation history
+- **Copy to Clipboard** - One-click copy for any message
+- **Export Conversations** - Download chat history as text files
+- **Markdown Support** - Rich text formatting in responses
 
-## Overview
-The project includes scripts and configurations to:
-- Upload documents
-- Extract text from various document formats
-- Generate embeddings using a BERT-based model
-- Fine-tune the model on specific tasks
+### 📤 Advanced File Upload
+- **Drag & Drop** - Intuitive file upload with drag-and-drop support
+- **File Preview** - See file details before uploading
+- **Progress Tracking** - Real-time upload progress indicators
+- **Multiple Formats** - Support for PDF, DOCX, PPTX, XLSX, TXT
+- **File Type Icons** - Visual file type identification
 
-## Project Structure
+### 📁 Project Management
+- **Organize Documents** - Group files into projects
+- **Search Functionality** - Quickly find projects and files
+- **Project Statistics** - View file counts and project details
+- **Bulk Operations** - Manage multiple files efficiently
+- **Quick Actions** - Generate embeddings and fine-tune models with one click
 
-**backend/**: Contains the backend code and scripts for the project.
-- **app.py**: Main Flask app for handling requests.
-- **download_models.py**: Script to download models.
-- **fine_tune_model.py**: Script to fine-tune the model.
-- **models/**: Directory to store models.
-  - **bert-base-multilingual-cased/**: Directory for the bert-base-multilingual-cased model.
-- **project_embeddings/**: Directory to store project embeddings.
-  - **YourProjectName/**: Your Own Projects Embeddings will be created here
-- **results/**: Directory to store fine-tuning results.
-- **static/**: Directory for static files.
-  - **embeddings/**: Directory to store generated embeddings.
-- **YourProjectName/**: Your Own Projects Embeddings will be created here
-  - **uploads/**: Directory to store uploaded files.
-  - **YourProjectName/**: Your Own Projects Embeddings will be created here
+### 🤖 AI Capabilities
+- **Semantic Search** - Find relevant information using embeddings
+- **BERT-based Models** - Advanced NLP for document understanding
+- **Fine-tuning Support** - Customize models for your specific use case
+- **Multi-language Support** - Handle documents in multiple languages
+- **Context-Aware Responses** - Answers based on document content
 
-- **templates/**: HTML templates.
-- **__pycache__/**: Python cache files.
+### 🔔 User Experience Enhancements
+- **Toast Notifications** - Beautiful, non-intrusive notifications
+- **Loading States** - Clear feedback during operations
+- **Error Handling** - User-friendly error messages
+- **Keyboard Shortcuts** - Power user features
+- **Empty States** - Helpful guidance when no data exists
 
-- **public/**: Frontend code and assets.
-  - **css/**: Custom styles.
-  - **img/**: Images for the frontend.
-    - **types/**: File type icons.
-  - **js/**: JavaScript files.
-  - **src/**: Source files for the frontend.
-    - **views/**: Views for the frontend.
+---
 
-**vendor/**: Contains third-party libraries and frameworks.
-- **bootstrap/**: Bootstrap CSS and JS.
-- **font-awesome/**: FontAwesome CSS and JS.
-- **jquery/**: jQuery library.
+## 🛠️ Technology Stack
 
-## Requirements
+### Backend
+- **Python 3.11+** - Core language
+- **Flask** - Web framework
+- **Transformers** - Hugging Face models
+- **FAISS** - Vector similarity search
+- **BERT** - Multilingual language model
+- **PyTorch** - Deep learning framework
 
-### Backend (Python)
-- Python 3.11
-- Flask
-- Flask-CORS
-- pdfminer.six
-- python-docx
-- openpyxl
-- python-pptx
-- transformers
-- faiss
-- langdetect
-- torch
+### Frontend
+- **PHP 7.4+** - Server-side scripting
+- **Bootstrap 5** - UI framework
+- **JavaScript (ES6+)** - Interactive features
+- **Font Awesome** - Icons
+- **jQuery** - DOM manipulation
 
-### Frontend (PHP)
-- PHP 7.4+
-- Bootstrap
-- FontAwesome
-- jQuery
+---
 
-## Installation
+## 📦 Installation
 
-1. Clone the repository:
+### Prerequisites
+
+- Python 3.11 or higher
+- PHP 7.4 or higher
+- Web server (Apache/Nginx) or PHP built-in server
+- pip (Python package manager)
+- Composer (for PHP dependencies, if needed)
+
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/LebToki/DocuChat.git
-cd DocuChat/backend
+cd DocuChat
 ```
 
-Set up a virtual environment and install dependencies:
+### Step 2: Backend Setup
+
 ```bash
+# Navigate to backend directory
+cd backend
+
+# Create virtual environment
 python -m venv .venv
-source .venv/bin/activate # On Windows, use `.venv\\Scripts\\activate`
+
+# Activate virtual environment
+# On Linux/Mac:
+source .venv/bin/activate
+# On Windows:
+.venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Download required models
+python download_models.py
+
+# Set environment variables
+export SECRET_KEY="your-secret-key-here"
+export BACKEND_URL="http://localhost:8080"
+export DOCUCHAT_USER="admin"
+export DOCUCHAT_PASS="password"
+
+# Run the Flask backend
+python app.py
 ```
 
-## Setup Simplified Steps
+The backend will start on `http://localhost:8080`
 
-### Backend
+### Step 3: Frontend Setup
 
-1. Create a virtual environment and activate it:
-   ```sh
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
-   ```
-# Install the required Python packages:
+```bash
+# Navigate back to project root
+cd ..
 
-```sh
-pip install -r requirements.txt
+# Configure backend URL in config.php
+# Edit public/src/views/config.php or set BACKEND_URL environment variable
+
+# Using PHP built-in server
+php -S localhost:8000 -t public
+
+# Or configure with your web server (Apache/Nginx)
+# Point document root to the 'public' directory
 ```
-# Download the necessary models by running:
 
-```sh
-python backend/download_models.py
+### Step 4: Docker Setup (Alternative)
+
+```bash
+# Build and run with Docker Compose
+docker-compose up --build
 ```
-# Run the Flask app:
 
-```sh
-python backend/app.py
+---
+
+## 🚀 Usage
+
+### 1. Create a Project
+
+1. Navigate to **Manage Projects**
+2. Enter a project name
+3. Click **Create Project**
+
+### 2. Upload Documents
+
+1. Go to **Upload Document**
+2. Select your project
+3. Drag & drop or browse for files
+4. Supported formats: PDF, DOCX, PPTX, XLSX, TXT
+
+### 3. Generate Embeddings
+
+1. In **Manage Projects**, select your project
+2. Click **Generate Embeddings**
+3. Wait for processing to complete
+
+### 4. Chat with Documents
+
+1. Go to **Chat with Document**
+2. Select your project
+3. Type your question
+4. Get AI-powered answers!
+
+### 5. Fine-tune Model (Optional)
+
+1. Select a project with documents
+2. Click **Fine-Tune Model**
+3. Wait for training to complete
+
+---
+
+## 📖 API Endpoints
+
+### Projects
+- `GET /projects` - List all projects
+- `POST /projects` - Create a new project
+- `DELETE /projects` - Delete a project
+
+### Files
+- `POST /upload` - Upload a document
+- `DELETE /projects/<project_name>/files` - Delete a file
+
+### Embeddings
+- `POST /projects/<project_name>/generate_embeddings` - Generate embeddings
+
+### Chat
+- `POST /ask` - Ask a question about documents
+
+### Model
+- `POST /fine_tune` - Fine-tune the model
+
+---
+
+## 🎯 Use Cases
+
+- **Research** - Analyze academic papers and research documents
+- **Education** - Interactive study materials and Q&A
+- **Business** - Document knowledge bases and FAQs
+- **Legal** - Contract and legal document analysis
+- **Technical** - API documentation and technical guides
+- **Personal** - Organize and query personal documents
+
+---
+
+## 🏗️ Project Structure
+
 ```
-# Frontend
-Ensure you have a local server setup (e.g., XAMPP, Laragon).
-
-Place the PHP files in the appropriate directory of your server.
-Open the project in your browser.
-
-# Usage
-- Upload documents through the frontend interface.
-- Ask questions related to the uploaded documents.
-- The backend will process the documents, generate embeddings, and provide relevant responses based on the content.
-
-# Fine-Tuning
-To fine-tune the model, run the following script:
+DocuChat/
+├── backend/
+│   ├── app.py                 # Flask application
+│   ├── download_models.py      # Model download script
+│   ├── fine_tune_model.py     # Model fine-tuning script
+│   ├── models/                # Stored models
+│   ├── project_embeddings/    # Project embeddings
+│   ├── static/
+│   │   └── uploads/           # Uploaded files
+│   └── requirements.txt       # Python dependencies
+├── public/
+│   ├── css/
+│   │   └── styles.css         # Main stylesheet
+│   ├── js/
+│   │   ├── scripts.js         # Main JavaScript
+│   │   └── utils.js           # Utility functions
+│   ├── img/                   # Images and icons
+│   └── src/
+│       └── views/             # PHP views
+├── docker-compose.yml         # Docker configuration
+├── Dockerfile.backend         # Backend Dockerfile
+├── Dockerfile.frontend        # Frontend Dockerfile
+└── README.md                  # This file
 ```
-python backend/fine_tune_model.py
 
+---
+
+## 🔧 Configuration
+
+### Environment Variables
+
+```bash
+# Backend
+SECRET_KEY=your-secret-key-here
+BACKEND_URL=http://localhost:8080
+DOCUCHAT_USER=admin
+DOCUCHAT_PASS=password
+ALLOWED_ORIGINS=*
+
+# Frontend (in config.php)
+BACKEND_URL=http://localhost:8080
 ```
-# Contributing
-Contributions are welcome! Please submit a pull request or open an issue for any improvements or bugs.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how you can help:
+
+1. **Fork the repository**
+2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Commit your changes** (`git commit -m 'Add some amazing feature'`)
+4. **Push to the branch** (`git push origin feature/amazing-feature`)
+5. **Open a Pull Request**
+
+### Contribution Guidelines
+
+- Follow the existing code style
+- Add comments for complex logic
+- Update documentation as needed
+- Write clear commit messages
+- Test your changes thoroughly
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Hugging Face** - For the Transformers library and models
+- **Facebook AI Research** - For FAISS
+- **Bootstrap** - For the UI framework
+- **Font Awesome** - For icons
+
+---
+
+## 📞 Support
+
+- **Issues** - [GitHub Issues](https://github.com/LebToki/DocuChat/issues)
+- **Discussions** - [GitHub Discussions](https://github.com/LebToki/DocuChat/discussions)
+
+---
+
+## 🌟 Star History
+
+If you find this project useful, please consider giving it a ⭐ on GitHub!
+
+---
+
+<div align="center">
+
+**Made with ❤️ by the DocuChat Team**
+
+[⬆ Back to Top](#-docuchat---ai-powered-document-chat-system)
+
+</div>
